@@ -4,6 +4,8 @@ public class Joskyday {
     //jo
     //jo
     //jo
-
+    //Metinol1
+    //Metinol2
+    //Metinol3
 
 }
