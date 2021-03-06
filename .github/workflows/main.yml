@@ -19,6 +19,12 @@ build:
 
     - name: Build and Run Tests
       run: mvn test --batch-mode --fail-at-end
+    - name: Publish Test Report
+      if: ${{ always() }}
+      uses: scacap/action-surefire-report@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+      
     - name: find chrome location
       run: |
         ls -a
@@ -27,9 +33,5 @@ build:
       run: |
 cd  /opt/google/chrome/google-chrome
 
-    - name: Publish Test Report
-      if: ${{ always() }}
-      uses: scacap/action-surefire-report@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+
  
