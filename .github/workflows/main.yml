@@ -29,9 +29,9 @@ build:
       run: |
         ls -a
         
-    - name: try to navigate chrome
-      run: |
-cd  /opt/google/chrome/google-chrome
+#    - name: try to navigate chrome
+ #     run: |
+ #      cd  /opt/google/chrome/google-chrome
 
 
  
