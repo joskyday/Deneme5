@@ -14,8 +14,19 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
+
+    
+    
       - name: Build and Run Tests
         run: mvn test --batch-mode --fail-at-end
+      - name: find chrome location
+        run: |
+          ls -a
+          
+      - name: try to navigate chrome
+        run: |
+cd  /opt/google/chrome/google-chrome
+
       - name: Publish Test Report
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
